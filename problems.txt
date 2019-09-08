@@ -1,0 +1,40 @@
+Your skill does not meet the necessary requirements and we were not able to complete a full review of your skill since your skill does not function properly in its current state.
+When invoking the skill with one or more of the intent(s) or sample utterances, the skill’s response is irrelevant to the request or contains an error. 
+
+Steps To Reproduce:
+
+User: "Alexa, play rock paper scissors lizard spock"
+Skill: "Welcome, you can directly play the game or ask for rules. Which would you like to try?"
+User: "play sheldon game"
+Skill: "You are in for a great game - ready? 3...2...1... rock"
+User: "paper"
+Skill: "The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time...Spock vaporizes Rock and as it always has Rock crushes Scissors"
+
+Please note that the skill provides an irrelevant response when users say any variable (rock, paper, scissor, lizard, spock) instead of proceeding with the game.
+
+Please see our Submission Checklist for guidance on intent responses.
+Additional, please refer to our documentation regarding the implementation of Built-in Intents.
+The skill does not return a help prompt that instructs users on how to navigate further into the skill’s core functionality. 
+
+Steps to Reproduce:
+
+User: "Alexa, open rock paper scissors lizard spock"
+Skill: "Welcome, you can directly play the game or ask for rules. Which would you like to try?"
+User: "help"
+Skill: "You can say hello to me! How can I help?", and the session remains open.
+
+Please note that the phrase "You can say hello to me" is irrelevant to the skill.
+
+Please ensure that, the help prompt ends with a question or a statement prompting users to respond, keeps the session open, and allows them to continue navigate within the skill.
+
+Please see our Submission Checklist for guidance on the help intent.
+After the skill completes a task, the session remains open with no prompt to the user. The skill must close the session after fulfilling requests if it does not prompt the user for any input.
+
+Issue: [SheldonGameRulesIntent] Intent
+
+Steps To Reproduce:
+
+User: "Alexa, open rock paper scissors lizard spock"
+Skill: "Welcome, you can directly play the game or ask for rules. Which would you like to try?"
+User: "rules"
+Skill: "The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time...as it always has Rock crushes Scissors", and the session remains open.
